@@ -60,7 +60,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar className='bg-white shadow-none mt-9' position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -91,9 +91,9 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon className='text-black' />
             </IconButton>
-            <Menu
+            <Menu className='text-black'
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -139,7 +139,7 @@ function Navbar() {
           >
            Sabrina Islam
           </Typography>
-          <Box className='w-[70px] text-center'  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className='w-[100px] ml-96'  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {navItems.map((item) => (
               <Link key={item} href={item.pathname}>
                 <Button  className='text-black '>{item.route}</Button>
