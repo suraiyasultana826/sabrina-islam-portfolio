@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import { Box } from "@mui/material";
 import About from "@/components/About";
 import Education from "@/components/Education";
+import Experience from "@/components/Experience";
 const HomePage = () => {
   return (
     <div>
@@ -35,6 +36,7 @@ const HomePage = () => {
       </div>
      <About></About>
      <Education></Education>
+     <Experience></Experience>
     </div>
   );
 };
