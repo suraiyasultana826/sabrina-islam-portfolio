@@ -12,8 +12,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import Link from 'next/link';
+// import Link from 'next/link';
+import {Link} from 'react-scroll';
 
 const navItems = [
     {
@@ -141,7 +141,13 @@ function Navbar() {
           </Typography>
           <Box className='w-[100px] ml-96'  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {navItems.map((item) => (
-              <Link key={item} href={item.pathname}>
+              <Link activeClass="active"
+              to={item.pathname}
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              key={item} href={item.pathname}>
                 <Button  className='text-black '>{item.route}</Button>
               </Link>
             ))}
